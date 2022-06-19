@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 body{
     margin-left: 100px;
     margin-right: 100px;
@@ -28,21 +27,61 @@ body{
     font-size: 20px;
     line-height: 40px;
 }
+
 .container{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: auto auto auto;
     padding: 10px;
-    padding-left: 40px;
+   margin-left: -10px;
     
 }
-@media (max-width: 800px) {
-    .grid-item {
-      flex: 100%;
-      margin-top: 20px;
-    }
+
+/*Media Queries to make page responsive */
+@media (max-width: 500px) {
+  body{
+    margin: 20px;
   }
+  #heading{
+    font-weight: 700;
+    text-align: center;
+  }
+  #box{
+   background-color: white;
+  }
+  #text{
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .grid-item {
+    flex: 100%;
+    margin-top: 20px;
+   }
+
+}
+
+@media (min-width:501px) and (max-width:770px) {
+  #heading{
+    font-weight: 700;
+    text-align: center;
+  }
+  #text{
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .grid-item {
+    flex: 100%;
+    margin-top: 20px;
+   }
+}
+@media (min-width:771px) and (max-width:1009px) {
+  .grid-item {
+    flex: 100%;
+    margin-top: 20px;
+   }
+}
+/* ------------------------------------- */
 .grid-item{
     text-align: center;
     font-size: 20px;
@@ -54,13 +93,15 @@ body{
     margin-right: 20px;
     margin-left: 45px;
 }
+
 .grid-item:hover{
     background-color: #E7D2CC;
 }
-.pop {
+
+.pop{
     animation: 2s anim-popoutin ease infinite;
-  }
-  
+}
+  /*Adding keyfromes for animation */
   @keyframes anim-popoutin {
     0% {
       color: black;
@@ -86,7 +127,7 @@ body{
       text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
     }
   }
-  
+  /*--------------------*/
 .dropping{
     font-family: sans-serif;
     font-size: 20px;
@@ -97,8 +138,8 @@ body{
   display: inline-block;
   text-align: left;
   height: 60px;
-  vertical-align: -18px;
-  font-size: 40px;
+  vertical-align: -25px;
+  font-size: 35px;
   letter-spacing: 5px;
 }
 
@@ -108,9 +149,8 @@ body{
   margin-left:-10px;
   position:absolute;
   font-weight:900;   
-  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
 }
-
+ /*Animation for each text */
 .dropping-texts > div:nth-child(1) {
   animation: roll 24s linear infinite 0s;
   color: #FFA384;
@@ -135,7 +175,9 @@ body{
   animation: roll 24s linear infinite 20s;
   color: #059DC0;
 }
+/*-------------------------------- */
 
+/*Keyframes for animation*/
 @keyframes roll {
   0% {
     font-size:0px;
@@ -171,7 +213,7 @@ body{
     opacity: 0;
   }
 }
-
+/* --------------------------------------- */
 
 .box_text{
   color:black;
@@ -189,7 +231,7 @@ body{
   font-weight:400;   
   box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
 }
-
+/*Animation for each text*/
 .box_text > div:nth-child(1) {
   animation: roll 24s linear infinite 0s;
   
@@ -215,4 +257,4 @@ body{
   
 }
 
-
+/* ------------------------------------ */
